@@ -6,7 +6,17 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('public'));
+}
+
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://cipher-studios.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json({ limit: '10mb' }));
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cipherstudio')
   .then(() => console.log('MongoDB Connected'))

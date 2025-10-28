@@ -133,6 +133,11 @@ JWT_SECRET=your-secret-key
 - [x] Professional UI/UX
 - [x] Error handling and validation
 
+## 🌐 Live Demo
+
+🔗 **Frontend**: [https://cipher-studios.vercel.app](https://cipher-studios.vercel.app)
+🔗 **Backend API**: [https://cipherstudio-r9o4.onrender.com](https://cipherstudio-r9o4.onrender.com)
+
 ## 🚀 Future Enhancements
 
 - [ ] User authentication (JWT)
