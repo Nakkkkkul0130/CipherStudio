@@ -64,8 +64,8 @@ const FileExplorer = ({ projects, activeProject, activeFile, onFileSelect, onCre
   };
 
   return (
-    <div className="h-full bg-gray-50">
-      <div className="p-4 border-b border-gray-200">
+    <div className="h-full bg-gray-50 flex flex-col">
+      <div className="p-4 border-b border-gray-200 flex-shrink-0">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-xs text-gray-500 uppercase font-semibold tracking-wider">Explorer</h3>
         </div>
@@ -79,7 +79,7 @@ const FileExplorer = ({ projects, activeProject, activeFile, onFileSelect, onCre
         </button>
       </div>
       
-      <div className="p-2 space-y-2">
+      <div className="flex-1 overflow-y-auto p-2 space-y-2">
         {projects.length === 0 ? (
           <div className="text-center py-8">
             <p className="text-gray-500 text-sm">No projects yet</p>

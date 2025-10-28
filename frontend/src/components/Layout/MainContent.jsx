@@ -19,7 +19,7 @@ const MainContent = ({
   onCodeChange
 }) => {
   return (
-    <div className="flex-1 flex overflow-hidden">
+    <div className="h-full flex overflow-hidden">
       {/* Sidebar */}
       <div className="w-64 border-r border-gray-200 bg-gray-50">
         <FileExplorer

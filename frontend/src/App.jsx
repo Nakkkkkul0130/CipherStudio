@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Layout/Header';
 import MainContent from './components/Layout/MainContent';
+import Footer from './components/Layout/Footer';
 import ProjectManager from './components/ProjectManager';
 import { useProjects } from './hooks/useProjects';
 
@@ -36,21 +37,25 @@ function App() {
         projectId={projectId}
       />
 
-      <MainContent
-        projects={projects}
-        activeProject={activeProject}
-        activeFile={activeFile}
-        currentFiles={currentFiles}
-        onFileSelect={handleFileSelect}
-        onCreateProject={createNewProject}
-        onCreateFile={createNewFile}
-        onFileDelete={handleFileDelete}
-        onProjectDelete={handleProjectDelete}
-        onProjectRename={handleProjectRename}
-        onFileRename={handleFileRename}
-        onSelectProject={selectProject}
-        onCodeChange={handleCodeChange}
-      />
+      <div className="flex-1 min-h-0">
+        <MainContent
+          projects={projects}
+          activeProject={activeProject}
+          activeFile={activeFile}
+          currentFiles={currentFiles}
+          onFileSelect={handleFileSelect}
+          onCreateProject={createNewProject}
+          onCreateFile={createNewFile}
+          onFileDelete={handleFileDelete}
+          onProjectDelete={handleProjectDelete}
+          onProjectRename={handleProjectRename}
+          onFileRename={handleFileRename}
+          onSelectProject={selectProject}
+          onCodeChange={handleCodeChange}
+        />
+      </div>
+      
+      <Footer />
     </div>
   );
 }
